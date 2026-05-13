@@ -142,7 +142,18 @@
 
 </div>
 
-<script src="script.js"></script>
+<script>
+    const urlPagina = "https://luandaweb01.github.io/verificacao-ft-2026-15";
+
+new QRCode(document.getElementById("qrcode"), {
+    text: urlPagina,
+    width: 280,
+    height: 280,
+    colorDark : "#000000",
+    colorLight : "#ffffff",
+    correctLevel : QRCode.CorrectLevel.H
+});
+</script>
 
 </body>
 </html>
