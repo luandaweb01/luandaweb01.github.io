@@ -5,11 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verificação de Documento</title>
 
-    <link rel="stylesheet" href="style.css">
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </head>
 <body>
+    <style>
+        * {
+}
+
+.summary-box {
+    margin-bottom: 40px;
+}
+
+.sum-line {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.observations {
+    margin-top: 20px;
+}
+
+.bottom-success {
+    background: #efe8b1;
+    padding: 20px;
+    color: #3f6d2f;
+    border: 1px solid #ddd;
+    border-top: none;
+}
+
+.qr-section {
+    margin-top: 40px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.qr-section h2 {
+    margin-bottom: 25px;
+    color: #222;
+}
+
+#qrcode {
+    display: flex;
+    justify-content: center;
+}
+
+#qrcode img {
+    border-radius: 20px;
+    padding: 10px;
+    background: white;
+}
+
+@media(max-width: 700px) {
+
+    .grid-info,
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .invoice-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+}
+    </style>
                 <div>
                     <label>Vencimento</label>
                     <p>2026-06-13</p>
